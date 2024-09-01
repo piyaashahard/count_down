@@ -1,0 +1,103 @@
+/** COMMON CSS STARTS **/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Arial;
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+
+/** COMMON CSS ENDS **/
+
+section {
+  height: 100vh;
+}
+
+section .container,
+section .row {
+  height: 100%;
+}
+
+section .counter {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #888;
+  margin: 0 15px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.timer {
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 17px 0;
+}
+
+.timer ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.timer ul span {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+}
+.timer ul li {
+  position: relative;
+}
+
+.timer ul li::after {
+  content: "";
+  height: 6px;
+  width: 6px;
+  background-color: #888;
+  position: absolute;
+  border-radius: 50%;
+  top: 8px;
+  right: -18px;
+}
+.timer ul li::before {
+  content: "";
+  height: 6px;
+  width: 6px;
+  background-color: #888;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 8px;
+  right: -18px;
+}
+
+.timer ul li:last-child::before,
+.timer ul li:last-child::after {
+  display: none;
+}
